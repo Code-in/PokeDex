@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pokemon View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PokemonViewController" customModule="PokeDex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(pokemon id)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFU-MI-Ajp">
+                                <rect key="frame" x="8" y="555" width="398" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="gPZ-TQ-boz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fXn-mk-bHM">
+                                <rect key="frame" x="0.0" y="100" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fXn-mk-bHM" secondAttribute="height" multiplier="1:1" id="zrV-Vf-lez"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(pokeman name)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbY-3l-cCI">
+                                <rect key="frame" x="8" y="514" width="398" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gPZ-TQ-boz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5Ed-17-D5T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SbY-3l-cCI" secondAttribute="trailing" constant="8" id="5Ic-AX-Bfk"/>
+                            <constraint firstItem="fXn-mk-bHM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BHE-3f-ReB"/>
+                            <constraint firstItem="fXn-mk-bHM" firstAttribute="top" secondItem="gPZ-TQ-boz" secondAttribute="bottom" id="Huq-84-eBJ"/>
+                            <constraint firstItem="SbY-3l-cCI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="MZy-5k-eFk"/>
+                            <constraint firstItem="SbY-3l-cCI" firstAttribute="top" secondItem="fXn-mk-bHM" secondAttribute="bottom" id="SXr-jk-SjR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vFU-MI-Ajp" secondAttribute="trailing" constant="8" id="Vhm-fi-Gc5"/>
+                            <constraint firstItem="vFU-MI-Ajp" firstAttribute="top" secondItem="SbY-3l-cCI" secondAttribute="bottom" id="b44-cZ-660"/>
+                            <constraint firstItem="gPZ-TQ-boz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="egP-ai-BoY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fXn-mk-bHM" secondAttribute="trailing" id="jxw-oU-ZY6"/>
+                            <constraint firstItem="vFU-MI-Ajp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="lqR-iZ-yFw"/>
+                            <constraint firstItem="gPZ-TQ-boz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vIg-eS-gAj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pokeIDLabel" destination="vFU-MI-Ajp" id="gOU-S0-5Rt"/>
+                        <outlet property="pokeImageView" destination="fXn-mk-bHM" id="ePA-pr-p41"/>
+                        <outlet property="pokeNameLabel" destination="SbY-3l-cCI" id="Gvb-dQ-FgA"/>
+                        <outlet property="pokeSearchBar" destination="gPZ-TQ-boz" id="Qsa-TH-s0i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+</document>
